@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import logo from './logo.png'
 import './App.css'
+import FetchFruit from './FetchFruit'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,6 +17,7 @@ function App() {
             {count}
           </button>
         </div>
+        <FetchFruit />
       </div>
     </div>
   )

@@ -5,9 +5,12 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react({
+      include: 'client/**/*.{ts,tsx}',
+    }),
+  ],
   test: {
-    environmentOptions: {},
     setupFiles: './test/setup.js',
   },
   server: {
