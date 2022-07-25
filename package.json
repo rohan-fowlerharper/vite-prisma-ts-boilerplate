@@ -15,6 +15,9 @@
     "test": "vitest",
     "test:coverage": "vitest --coverage"
   },
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
+  },
   "dependencies": {
     "@prisma/client": "^4.1.0",
     "dotenv": "^16.0.1",

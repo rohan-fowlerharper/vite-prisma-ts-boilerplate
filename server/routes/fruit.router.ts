@@ -3,8 +3,10 @@ import prisma from '../prisma'
 
 const router = express.Router()
 
+import * as db from '../db/fruit.db'
+
 router.get('/', async (req, res) => {
-  const fruit = await prisma.fruit.findMany()
+  const fruit = await db.getFruitThatEndWithO()
 
   res.json(fruit)
 })
