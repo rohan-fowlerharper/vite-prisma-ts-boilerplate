@@ -11,7 +11,7 @@ export default defineConfig({
     }),
   ],
   test: {
-    setupFiles: './test/setup.js',
+    setupFiles: './test/setup.ts',
   },
   server: {
     proxy: {

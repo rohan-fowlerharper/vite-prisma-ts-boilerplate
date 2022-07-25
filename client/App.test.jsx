@@ -1,8 +1,11 @@
 // @vitest-environment jsdom
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect, vi } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import App from './App'
+
+// TODO: learn how to polyfill fetch in vitest
+vi.mock('./FetchFruit')
 
 describe('<App />', () => {
   it('renders', () => {
