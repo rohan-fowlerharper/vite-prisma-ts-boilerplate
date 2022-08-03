@@ -9,3 +9,11 @@ export function getFruitThatEndWithO() {
     },
   })
 }
+
+export function getWomblesWithFruit() {
+  return prisma.fruit.findMany({
+    include: {
+      wombles: true,
+    },
+  })
+}
