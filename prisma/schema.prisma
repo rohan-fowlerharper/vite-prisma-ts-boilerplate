@@ -10,10 +10,19 @@ datasource db {
   url      = "file:./dev.db"
 }
 
+model Womble {
+  id      String @id @default(cuid())
+  name    String
+  trait   String
+  fruit   Fruit  @relation(fields: [fruitId], references: [id])
+  fruitId String
+}
+
 model Fruit {
   id        String   @id @default(cuid())
   name      String
   color     String
   createdAt DateTime @default(now())
   updatedAt DateTime @default(now())
+  Womble    Womble[]
 }
